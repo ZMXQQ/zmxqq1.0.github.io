@@ -25,7 +25,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Muse',
     version: '7.4.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
@@ -43,7 +43,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
@@ -62,7 +62,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="blog创建问题 VsCode无法保存/修改文件，提示没有权限 (Insufficient permissions. Select ‘Retry as Admin’ to retry as administrator. )  解决方案:   右击vscode 点击属性选择兼容性，勾选 “以管理员身份运行此程序” 确定即可   基本命令 初始化博客 hexo init 文件夹名称  新建文章 hex">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-18T08:50:32.005Z">
+<meta property="og:updated_time" content="2019-09-18T11:48:06.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇博客文章">
 <meta name="twitter:description" content="blog创建问题 VsCode无法保存/修改文件，提示没有权限 (Insufficient permissions. Select ‘Retry as Admin’ to retry as administrator. )  解决方案:   右击vscode 点击属性选择兼容性，勾选 “以管理员身份运行此程序” 确定即可   基本命令 初始化博客 hexo init 文件夹名称  新建文章 hex">
@@ -201,9 +201,38 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
   </ul>
 
+    
+
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -217,8 +246,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
-
           <div id="content" class="content">
             
 
@@ -256,7 +283,7 @@
                 
               
 
-              <time title="创建时间：2019-09-18 10:17:21 / 修改时间：16:50:32" itemprop="dateCreated datePublished" datetime="2019-09-18T10:17:21+08:00">2019-09-18</time>
+              <time title="创建时间：2019-09-18 10:17:21 / 修改时间：19:48:06" itemprop="dateCreated datePublished" datetime="2019-09-18T10:17:21+08:00">2019-09-18</time>
             </span>
           
             
@@ -312,6 +339,16 @@
         
       
 
+	  <div>
+		  
+			<div>
+    
+        <div style="text-align:center;color: #008B8B;font-size:14px;">-------------　　　　本文结束　<i class="fa fa-heart"></i>　感谢您的阅读　　　　-------------</div>
+    
+</div>
+		  
+	  </div>	
+	  
       <footer class="post-footer">
 
         
@@ -328,6 +365,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/09/18/markdown基本语法-md/" rel="prev" title="markdown基本语法.md">
+                  markdown基本语法.md <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -394,8 +435,34 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
         </a>
       </div>
     
@@ -415,15 +482,22 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">李佳庆</span>
+
+  <div class="powered-by">
+	<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+	  本站访客数:<span id="busuanzi_value_site_uv"></span>
+	</span>
+  </div>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
         
 
@@ -447,16 +521,13 @@
 
 
     
-    
   
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  <script defer src="/lib/three/three.min.js"></script>
-  <script defer src="/lib/three/three-waves.min.js"></script>
 <script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
 <script src="/js/next-boot.js?v=7.4.0"></script>
 
 
@@ -469,6 +540,8 @@
 
 
 
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
 
 
