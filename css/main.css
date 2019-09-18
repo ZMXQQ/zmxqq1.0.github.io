@@ -1023,6 +1023,7 @@ pre .javascript .function {
   }
 }
 .brand {
+  color: #4682b4 !important;
   background: #222;
   border-bottom: none;
   color: #fff;
@@ -1673,7 +1674,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6cd4d0;
+  background: #888eb1;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2435,7 +2436,7 @@ body {
   background: url("http://b-ssl.duitang.com/uploads/blog/201512/09/20151209180854_4SBJn.jpeg") none repeat scroll !important;
 }
 .footer {
-  background: rgba(238,238,238,0.7) none repeat scroll !important;
+  background: rgba(238,238,238,0.5) none repeat scroll !important;
 }
 #sidebar {
   background-size: cover;
@@ -2446,7 +2447,7 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 25px;
-  background: rgba(255,255,255,0.9) none repeat scroll !important;
+  background: #fff none repeat scroll !important;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
