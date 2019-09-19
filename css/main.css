@@ -1674,7 +1674,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5d4044;
+  background: #ffb106;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2426,7 +2426,6 @@ embed {
   width: 320px;
 }
 body {
-  background: url("http://b-ssl.duitang.com/uploads/blog/201512/09/20151209180854_4SBJn.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
