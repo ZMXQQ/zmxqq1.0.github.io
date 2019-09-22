@@ -10,6 +10,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 3.9.0">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #CDC9C9; /*进度条颜色*/
+        height: 1px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #CDC9C9, 0 0 5px     #CDC9C9; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #CDC9C9;    /*上边框颜色*/
+        border-left-color: #CDC9C9;    /*左边框颜色*/
+    }
+</style>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/32.png?v=7.4.0">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/16.png?v=7.4.0">
@@ -56,12 +72,12 @@
 </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="ZMXQQ">
+<meta property="og:title" content="ZMXQQ技术博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="ZMXQQ">
+<meta property="og:site_name" content="ZMXQQ技术博客">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZMXQQ">
+<meta name="twitter:title" content="ZMXQQ技术博客">
   <link rel="canonical" href="http://yoursite.com/">
 
 
@@ -76,7 +92,7 @@
   };
 </script>
 
-  <title>ZMXQQ</title>
+  <title>ZMXQQ技术博客</title>
   
 
 
@@ -123,7 +139,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ZMXQQ</span>
+        <span class="site-title">ZMXQQ技术博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -259,7 +275,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -279,7 +295,7 @@
                 
               
 
-              <time title="创建时间：2019-09-22 09:35:12 / 修改时间：10:27:49" itemprop="dateCreated datePublished" datetime="2019-09-22T09:35:12+08:00">2019-09-22</time>
+              <time title="创建时间：2019-09-22 09:35:12 / 修改时间：11:25:12" itemprop="dateCreated datePublished" datetime="2019-09-22T09:35:12+08:00">2019-09-22</time>
             </span>
           
             
@@ -315,21 +331,17 @@
 <p><strong><em>冒泡排序</em></strong></p>
 <p>算法描述：</p>
 <blockquote>
-<p>i从0开始，i与i+1比较，如果i&gt;i+1，那么就互换<br>i不断增加，直到 i &lt; n-1(n是数组元素的个数，n-1是数组已经最后一个元素)，一趟下来，可以让数组元素中最大值排在数组的最后面</p>
+<p>i从0开始，i与i+1比较，如果i&gt;i+1，那么就互换<br>i不断增加，直到 i &lt; n-1(n是数组元素的个数，n-1是数组</p>
 </blockquote>
-<blockquote>
-<p>第二趟排序开始每一趟排序从后开始减少一次比较，因为最大的值已经在上一次排序中到了最后面</p>
-</blockquote>
-<p>算法优化</p>
-<blockquote>
-<p>如果在某躺排序中没有发生交换位置，那么我们可以认为该数组已经排好序了</p>
-</blockquote>
-<p>注意事项</p>
-<blockquote>
-<p>比较时注意数组 i+1溢出。</p>
-</blockquote>
-<p>源码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">package com.zmxqq;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Array;</span><br><span class="line">import java.util.concurrent.ForkJoinPool;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author zmxqq</span><br><span class="line"> * @date 2019/9/22 - 9:22</span><br><span class="line"> */</span><br><span class="line">public class test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] arrays = &#123;3, 2, 6, 1, 3&#125;;</span><br><span class="line">        //装载临时变量</span><br><span class="line">        int temp;</span><br><span class="line"></span><br><span class="line">        //记录是否发生置换(避免出现无效的排序)</span><br><span class="line">        int isChange;</span><br><span class="line"></span><br><span class="line">            /*第二趟排序开始每一趟排序从后开始减少一次比较，因为最大的值已经在上一次排序中到了最后面*/</span><br><span class="line">        for (int j = 0; j &lt; 5; j++) &#123;</span><br><span class="line">            /*第一趟排序：如果前一位的数比后一位的数要大，</span><br><span class="line">        那么就交换，直到将数组的所有元素都比较了一遍！经过我们第一趟比较，</span><br><span class="line">        我们可以发现：最大的值就在数组的末尾了!*/</span><br><span class="line"></span><br><span class="line">            //每比较一次，重新初始化为0</span><br><span class="line">            isChange = 0;</span><br><span class="line">            for (int i = 0; i &lt; 4-j; i++) &#123;</span><br><span class="line">                if (arrays[i] &gt; arrays[i + 1]) &#123;</span><br><span class="line">                    temp = arrays[i + 1];</span><br><span class="line">                    arrays[i + 1] = arrays[i];</span><br><span class="line">                    arrays[i] = temp;</span><br><span class="line"></span><br><span class="line">                    //发生置换，赋值为1</span><br><span class="line">                    isChange = 1;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            //如果未发生置换</span><br><span class="line">            if (isChange==0)&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">                System.out.print(arrays[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/09/22/数据结构与算法复习/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -362,7 +374,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -471,7 +483,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -574,7 +586,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -681,7 +693,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -784,7 +796,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -876,7 +888,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -1072,23 +1084,13 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">李佳庆</span>
-
-  <span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-  </span>
 </div>
 
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
-</span>
-</div>
 
         
 

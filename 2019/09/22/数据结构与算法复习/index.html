@@ -10,6 +10,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 3.9.0">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #CDC9C9; /*进度条颜色*/
+        height: 1px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #CDC9C9, 0 0 5px     #CDC9C9; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #CDC9C9;    /*上边框颜色*/
+        border-left-color: #CDC9C9;    /*左边框颜色*/
+    }
+</style>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/32.png?v=7.4.0">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/16.png?v=7.4.0">
@@ -55,18 +71,18 @@
   };
 </script>
 
-  <meta name="description" content="冒泡排序 算法描述：  i从0开始，i与i+1比较，如果i&amp;gt;i+1，那么就互换i不断增加，直到 i &amp;lt; n-1(n是数组元素的个数，n-1是数组已经最后一个元素)，一趟下来，可以让数组元素中最大值排在数组的最后面   第二趟排序开始每一趟排序从后开始减少一次比较，因为最大的值已经在上一次排序中到了最后面  算法优化  如果在某躺排序中没有发生交换位置，那么我们可以认为该数组已经排好序">
+  <meta name="description" content="冒泡排序 算法描述：  i从0开始，i与i+1比较，如果i&amp;gt;i+1，那么就互换i不断增加，直到 i &amp;lt; n-1(n是数组元素的个数，n-1是数组">
 <meta name="keywords" content="DataStructure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构与算法复习">
 <meta property="og:url" content="http://yoursite.com/2019/09/22/数据结构与算法复习/index.html">
-<meta property="og:site_name" content="ZMXQQ">
-<meta property="og:description" content="冒泡排序 算法描述：  i从0开始，i与i+1比较，如果i&amp;gt;i+1，那么就互换i不断增加，直到 i &amp;lt; n-1(n是数组元素的个数，n-1是数组已经最后一个元素)，一趟下来，可以让数组元素中最大值排在数组的最后面   第二趟排序开始每一趟排序从后开始减少一次比较，因为最大的值已经在上一次排序中到了最后面  算法优化  如果在某躺排序中没有发生交换位置，那么我们可以认为该数组已经排好序">
+<meta property="og:site_name" content="ZMXQQ技术博客">
+<meta property="og:description" content="冒泡排序 算法描述：  i从0开始，i与i+1比较，如果i&amp;gt;i+1，那么就互换i不断增加，直到 i &amp;lt; n-1(n是数组元素的个数，n-1是数组">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-22T02:27:49.868Z">
+<meta property="og:updated_time" content="2019-09-22T03:25:12.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构与算法复习">
-<meta name="twitter:description" content="冒泡排序 算法描述：  i从0开始，i与i+1比较，如果i&amp;gt;i+1，那么就互换i不断增加，直到 i &amp;lt; n-1(n是数组元素的个数，n-1是数组已经最后一个元素)，一趟下来，可以让数组元素中最大值排在数组的最后面   第二趟排序开始每一趟排序从后开始减少一次比较，因为最大的值已经在上一次排序中到了最后面  算法优化  如果在某躺排序中没有发生交换位置，那么我们可以认为该数组已经排好序">
+<meta name="twitter:description" content="冒泡排序 算法描述：  i从0开始，i与i+1比较，如果i&amp;gt;i+1，那么就互换i不断增加，直到 i &amp;lt; n-1(n是数组元素的个数，n-1是数组">
   <link rel="canonical" href="http://yoursite.com/2019/09/22/数据结构与算法复习/">
 
 
@@ -81,7 +97,7 @@
   };
 </script>
 
-  <title>数据结构与算法复习 | ZMXQQ</title>
+  <title>数据结构与算法复习 | ZMXQQ技术博客</title>
   
 
 
@@ -128,7 +144,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ZMXQQ</span>
+        <span class="site-title">ZMXQQ技术博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -265,7 +281,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZMXQQ">
+      <meta itemprop="name" content="ZMXQQ技术博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">数据结构与算法复习
@@ -284,7 +300,7 @@
                 
               
 
-              <time title="创建时间：2019-09-22 09:35:12 / 修改时间：10:27:49" itemprop="dateCreated datePublished" datetime="2019-09-22T09:35:12+08:00">2019-09-22</time>
+              <time title="创建时间：2019-09-22 09:35:12 / 修改时间：11:25:12" itemprop="dateCreated datePublished" datetime="2019-09-22T09:35:12+08:00">2019-09-22</time>
             </span>
           
             
@@ -320,8 +336,10 @@
 <p><strong><em>冒泡排序</em></strong></p>
 <p>算法描述：</p>
 <blockquote>
-<p>i从0开始，i与i+1比较，如果i&gt;i+1，那么就互换<br>i不断增加，直到 i &lt; n-1(n是数组元素的个数，n-1是数组已经最后一个元素)，一趟下来，可以让数组元素中最大值排在数组的最后面</p>
+<p>i从0开始，i与i+1比较，如果i&gt;i+1，那么就互换<br>i不断增加，直到 i &lt; n-1(n是数组元素的个数，n-1是数组</p>
 </blockquote>
+<a id="more"></a>
+<p>已经最后一个元素)，一趟下来，可以让数组元素中最大值排在数组的最后面</p>
 <blockquote>
 <p>第二趟排序开始每一趟排序从后开始减少一次比较，因为最大的值已经在上一次排序中到了最后面</p>
 </blockquote>
@@ -520,23 +538,13 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">李佳庆</span>
-
-  <span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-  </span>
 </div>
 
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
-</span>
-</div>
 
         
 

@@ -1023,7 +1023,7 @@ pre .javascript .function {
   }
 }
 .brand {
-  color: #4682b4 !important;
+  color: #eed5b7 !important;
   background: #222;
   border-bottom: none;
   color: #fff;
@@ -1684,7 +1684,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e3ffc9;
+  background: #7d6716;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2696,4 +2696,10 @@ body {
   background: #fff none repeat scroll !important;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+* {
+  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword2.ico"), auto !important;
+}
+:active {
+  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"), auto !important;
 }
