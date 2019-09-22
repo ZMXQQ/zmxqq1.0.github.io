@@ -1594,6 +1594,16 @@ article:last-child .post-eof {
   align-self: center;
   height: 30px;
 }
+.post-body p a {
+  color: #668b8b;
+  border-bottom: none;
+  border-bottom: 1px solid #668b8b;
+}
+.post-body p a:hover {
+  color: #ff6a6a;
+  border-bottom: none;
+  border-bottom: 1px solid #ff6a6a;
+}
 .sidebar {
   background: #222;
   bottom: 0;
@@ -1674,7 +1684,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #62ebe4;
+  background: #71212d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
